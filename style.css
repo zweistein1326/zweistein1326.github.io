@@ -1,0 +1,423 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:  sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1400px;
+    background: linear-gradient(to right,rgba(222, 184, 135,0.4),rgba(0, 0, 0,0.1) );
+}
+.container{
+    /* background-color: lightblue; */
+    height: 100%;
+    width:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightpink; */
+    /* background-color: khaki;   */
+}
+.card{
+    transform-style: preserve-3d;
+    /* min-height:90vh; */
+    width:80%;
+    box-shadow:0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    padding: 0rem 4rem;
+    background-color: white;
+    position: relative;
+}
+
+
+.profile{
+    min-height: 35vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+       transition: all 0.75s ease-out;
+      /* background-color: lightcoral; */
+}
+.profile img{
+    width:15rem;
+    height: 15rem;
+    z-index:2;
+    transition: all 0.75s ease-out;
+    background: url('./me.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.circle{
+    width:15rem;
+    height:15rem;
+    background:linear-gradient(to right,rgba(245,70,66,0.75),rgba(8,83,156,0.75));
+    position: absolute;
+    border-radius: 50%;
+    z-index:1;
+    /* transition: all 0.75s ease-out; */
+}
+
+.info h1{
+    font-size:3rem;
+    transition: all 0.75s ease-out;
+    padding: 2rem 0;
+}
+.info h3{
+    font-size: 1.3rem;
+    padding:1rem 0;
+    color:#585858;
+    font-weight: lighter;
+       transition: all 0.75s ease-out;
+}
+.info h2{
+    font-size:1rem;
+    font-weight: lighter;
+    padding-bottom: 1rem ;
+    /* padding-bottom: 1rem; */
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+    margin: 1rem 0;
+}
+.social a{
+    padding:.5rem 2rem;
+    background:none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgba(0,0,0);
+    /* background-color: burlywood; */
+}
+.resume{
+    display: flex;
+    transition: all 0.75s ease-out;
+    margin-top:2rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.resume a{
+    padding: .5rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: rgb(222, 184, 135);
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0,0,0);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:1.2rem;
+    text-decoration: none;
+}
+/* .resume a:hover{
+color:burlywood;
+    background-color: rgba(0, 0, 0, 0.8);   
+} */
+button.active{
+    background-color: gray;
+    color:white;
+}
+.next{
+    width: 100%;
+    /* position: absolute; */
+    margin-bottom: 1rem;
+    margin-top :2rem;
+       transition: all 0.75s ease-out;
+}
+.next button{
+    width:100%;
+    padding: 1rem 0rem;
+    background: burlywood;
+    border:none;
+    color:rgba(0, 0, 0, 0.8);
+    /* color:white; */
+    cursor:pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all 0.75s ease-out;
+       /* border: 1px solid rgba(0, 0, 0, 0.8); */
+}
+
+/* #home{
+    display: none;
+} */
+
+#education{
+    display:none;
+}
+
+.education{
+    padding: 1rem 0;
+    width: 100%;
+    min-height: 15rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.education img {
+    float: left;
+    width: 10rem;
+    height: 12rem;
+    padding: 2rem;
+}
+/* .info .education img {
+    float: right;
+    width: 12rem;
+    height: 12rem;
+} */
+/* .education img:nth-child(even){
+    float: right;
+} */
+
+#work{
+    display: none;
+}
+#skills{
+    display: none;
+}
+
+#projects{
+    display:none;
+}
+
+.project{
+    padding: 1rem 0;
+    width: 100%;
+    min-height: 15rem;
+    display: flex;
+    align-items: center;
+}
+
+.project .description{
+    padding: 0px 2px 0px 10px;
+}
+
+.project h2{
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+.project p{
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    color:#4e4e4e
+}
+
+.project img{
+    max-width: 10rem;
+    max-height:6rem;
+    border-radius: 50%;
+    float: left;
+}
+.project .links a{
+    text-decoration: none;
+    color: burlywood;
+    cursor: pointer;
+}
+
+.work img{
+    max-width: 10rem;
+    max-height:6rem;
+    border-radius: 50%;
+    float: left;
+}
+
+.education h2{
+    font-size: 1.3rem;
+}
+
+
+.skill{
+    /* display: inline;
+    max-width: 4rem; */
+    margin: 0.5rem ;
+    padding: 1rem;
+    border-radius:30px;
+   box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+   border: 1px solid burlywood;
+   background-color: rgba(0,0,0,0.8);
+   color: burlywood;
+}
+
+.work{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+.work .title{
+
+}
+
+#contact{
+    display: none;
+}
+
+input{
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    padding: .5rem;
+}
+
+textarea{
+        width: 100%;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+        font-family:  sans-serif;
+        padding: .5rem;
+        resize: none;
+        height: 30vh;
+}
+
+input #message{
+
+}
+
+@media only screen and (max-width:800px){
+    .profile img{
+    width:100%;
+    height: 100%;
+    z-index:2;
+    transition: all 0.75s ease-out;
+    background: url('./me.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.circle{
+    width:10rem;
+    height:10rem;
+    background:linear-gradient(to right,rgba(245,70,66,0.75),rgba(8,83,156,0.75));
+    position: absolute;
+    border-radius: 50%;
+    z-index:1;
+    /* transition: all 0.75s ease-out; */
+}
+.info h1{
+    font-size:2rem;
+    transition: all 0.75s ease-out;
+    padding: 2rem 0;
+}
+.info h3{
+    font-size: 1rem;
+    padding:1rem 0;
+    color:#585858;
+    font-weight: lighter;
+       transition: all 0.75s ease-out;
+}
+.info h2{
+    font-size:1rem;
+    font-weight: lighter;
+    padding-bottom: 1rem ;
+    /* padding-bottom: 1rem; */
+}
+.social{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+    margin: 1rem 0;
+}
+.social a{
+    padding:.5rem .5rem;
+    background:none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgba(0,0,0);
+    /* background-color: burlywood; */
+}
+.container{
+    /* background-color: lightblue; */
+    height: 100%;
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightpink; */
+    /* background-color: khaki;   */
+}
+.card{
+    transform-style: preserve-3d;
+    /* min-height:90vh; */
+    width:100%;
+    box-shadow:0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    padding: 0rem 4rem;
+    background-color: white;
+    position: relative;
+}
+.resume{
+    display: flex;
+    transition: all 0.75s ease-out;
+    margin-top:1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.resume a{
+    padding: .5rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: rgb(222, 184, 135);
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0,0,0);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:1rem;
+    text-decoration: none;
+    text-align: center;
+}
+.next{
+    width: 100%;
+    /* position: absolute; */
+    margin-bottom: 1rem;
+    margin-top :1rem;
+    transition: all 0.75s ease-out;
+}
+.next button{
+    text-align: center;
+    width:100%;
+    padding: 0.5rem 0rem;
+    background: burlywood;
+    border:none;
+    color:rgba(0, 0, 0, 0.8);
+    /* color:white; */
+    cursor:pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all 0.75s ease-out;
+       /* border: 1px solid rgba(0, 0, 0, 0.8); */
+}
+
+}
+
+@media only screen and (max-height:700px){
+    @media only screen and (max-width:800px){
+.profile{
+    min-height: 25vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+       transition: all 0.75s ease-out;
+      /* background-color: lightcoral; */
+}
+    }
+    
+}
